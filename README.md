@@ -45,4 +45,9 @@ Valid8Proxy is a versatile and user-friendly tool designed for fetching, validat
 
 Contributions and feature requests are welcome! If you encounter any issues or have ideas for improvement, feel free to open an issue or submit a pull request.
 
+#### 💬 If having an issue [Chat here](https://discord.gg/ZChEmMwE8d)
+[![Discord Server](https://discord.com/api/guilds/726495265330298973/embed.png)](https://discord.gg/ZChEmMwE8d)
 
+### ⭔ Snapshots:
+---
+<img width="100%" align="centre" src="" />
