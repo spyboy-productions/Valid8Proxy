@@ -42,7 +42,7 @@ Valid8Proxy is a versatile and user-friendly tool designed for fetching, validat
 #### If you already have proxies just want to validate usee this:
 
 ```
-python validator.py
+python Validator.py
 ```
 
 Follow the prompts:
