@@ -49,7 +49,7 @@ Follow the prompts:
 
 Enter the path to the file containing proxies (e.g., proxy_list.txt).
 Enter the number of proxies you want to validate.
-The script will then validate the specified number of proxies using multiple threads and print the valid proxies vertically.
+The script will then validate the specified number of proxies using multiple threads and print the valid proxies.
 
 ## Contribution:
 
