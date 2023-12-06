@@ -10,7 +10,7 @@ Valid8Proxy is a versatile and user-friendly tool designed for fetching, validat
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/Valid8Proxy.git
+   git clone https://github.com/spyboy-productions/Valid8Proxy.git
    ```
 
 2. **Navigate to the Directory:**
