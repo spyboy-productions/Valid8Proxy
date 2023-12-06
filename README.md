@@ -4,9 +4,7 @@ Valid8Proxy is a versatile and user-friendly tool designed for fetching, validat
 
 1. **Proxy Fetching:** Retrieve proxies from popular proxy sources with a single command.
 2. **Proxy Validation:** Efficiently validate proxies using multithreading to save time.
-3. **Color-Coded Output:** Visualize working and non-working proxies with color-coded terminal output for easy identification.
-4. **Save to File:** Save the list of validated proxies to a file for future use.
-5. **User-Friendly:** Simple command-line interface with interactive prompts.
+3. **Save to File:** Save the list of validated proxies to a file for future use.
 
 ## Usage:
 
@@ -40,6 +38,18 @@ Valid8Proxy is a versatile and user-friendly tool designed for fetching, validat
 7. **Check Results:**
    - Review the working proxies in the terminal with color-coded output.
    - Find the list of working proxies saved in "proxies.txt."
+
+#### If you already have proxies just want to validate usee this:
+
+```
+python validator.py
+```
+
+Follow the prompts:
+
+Enter the path to the file containing proxies (e.g., proxy_list.txt).
+Enter the number of proxies you want to validate.
+The script will then validate the specified number of proxies using multiple threads and print the valid proxies vertically.
 
 ## Contribution:
 
