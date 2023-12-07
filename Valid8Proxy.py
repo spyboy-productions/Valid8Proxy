@@ -13,7 +13,7 @@ twitter_url = 'https://spyboy.in/twitter'
 discord = 'https://spyboy.in/Discord'
 website = 'https://spyboy.in/'
 blog = 'https://spyboy.blog/'
-github = 'https://github.com/spyboy-productions/CloakQuest3r'
+github = 'https://github.com/spyboy-productions/Valid8Proxy'
 
 VERSION = '0.0.1'
 
