@@ -48,7 +48,7 @@ Valid8Proxy is a versatile and user-friendly tool designed for fetching, validat
 
 4. **Run the Tool:**
    ```bash
-   python valid8proxy.py
+   python Valid8Proxy.py
    ```
 
 5. **Follow Interactive Prompts:**
