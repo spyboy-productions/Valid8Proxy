@@ -83,4 +83,4 @@ Contributions and feature requests are welcome! If you encounter any issues or h
 
 ### ⭔ Snapshots:
 ---
-<img width="100%" align="centre" src="" />
+<img width="100%" align="centre" src="https://cdn.discordapp.com/attachments/1141162711464550430/1182123727882821662/Screenshot_2023-12-07_at_6.25.23_AM.png" />
