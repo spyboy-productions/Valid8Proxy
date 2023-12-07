@@ -39,7 +39,7 @@ def print_banners():
     """
     prints the program banners
     """
-    print(f'{R}{banner}{W}\n')
+    print(f'{G}{banner}{W}\n')
     print(f'{G}[+] {Y}Version      : {W}{VERSION}')
     print(f'{G}[+] {Y}Created By   : {W}Spyboy')
     print(f'{G} ╰➤ {Y}Twitter      : {W}{twitter_url}')
