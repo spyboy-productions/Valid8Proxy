@@ -70,7 +70,7 @@ def fetch_proxies(url):
 
 def is_proxy_working(proxy):
     try:
-        response = requests.get("https://www.example.com", proxies={"http": proxy, "https": proxy}, timeout=10)
+        response = requests.get("https://www.example.com", proxies={"http": proxy, "https": proxy}, timeout=5)
         response.raise_for_status()
         return response.status_code == 200
     except requests.exceptions.RequestException as e:
