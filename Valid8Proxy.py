@@ -15,7 +15,7 @@ website = 'https://spyboy.in/'
 blog = 'https://spyboy.blog/'
 github = 'https://github.com/spyboy-productions/Valid8Proxy'
 
-VERSION = '0.0.1'
+VERSION = '0.0.2'
 
 R = '\033[31m'  # red
 G = '\033[32m'  # green
@@ -75,7 +75,7 @@ def is_proxy_working(proxy):
         return response.status_code == 200
     except requests.exceptions.RequestException as e:
         with print_lock:
-            print(f'Error validating proxy {proxy}: {Fore.RED}{str(e)}{Style.RESET_ALL}')
+            print(f'{proxy} : {Fore.RED}[Not Working]{Style.RESET_ALL}')
         return False
 
 def validate_and_print_proxies(proxy_ips, print_limit=None):
@@ -97,7 +97,7 @@ def validate_and_print_proxy(proxy, working_proxies, print_limit):
     global stop_code
     if not stop_code and is_proxy_working(proxy):
         with print_lock:
-            print(f"Working Proxy IP: {Fore.GREEN}{proxy}{Style.RESET_ALL}")
+            print(f"{proxy} : {Fore.GREEN}[Working]{Style.RESET_ALL}")
             working_proxies.add(proxy)
             printed_count = len(working_proxies)
             if printed_count >= print_limit:
@@ -111,7 +111,7 @@ def main():
     print_banners()
     print(f"{C}Let's find some validated proxies!{W}")
     try:
-        num_proxies_to_print = int(input(f"{W}Enter the number of proxies you want to print: {Y}"))
+        num_proxies_to_print = int(input(f"{Fore.YELLOW}Enter the number of proxies you want to print:{Style.RESET_ALL}"))
     except ValueError:
         print("Invalid input. Please enter a valid number.")
         sys.exit(1)
@@ -133,19 +133,19 @@ def main():
 
     working_proxies = validate_and_print_proxies(proxy_ips, print_limit=num_proxies_to_print)
 
-    print("\nList of Working Proxies:")
+    print(f"\n{Fore.YELLOW}[+]{Fore.GREEN} List of Working Proxies:{Style.RESET_ALL}\n")
     for proxy in working_proxies:
-        print(f"{Fore.GREEN}{proxy}{Style.RESET_ALL}")
+        print(f"{proxy}")
 
     save_proxies_to_file(working_proxies)
 
     end_time = time.time()
     elapsed_time = end_time - start_time
-    print(f"\nTime taken: {elapsed_time} seconds")
+    print(f"\n{Fore.YELLOW}[+]{Fore.GREEN} Time taken: {Fore.YELLOW}{elapsed_time} seconds")
 
     current_directory = os.getcwd()
     save_path = os.path.join(current_directory, "proxies.txt")
-    print(f"\nList of Working Proxies saved at: {Fore.YELLOW}{save_path}{Style.RESET_ALL}")
+    print(f"\n{Fore.YELLOW}[+]{Fore.RED} List of Working Proxies saved at: {Fore.GREEN}{save_path}{Style.RESET_ALL}")
 
 if __name__ == "__main__":
     main()
