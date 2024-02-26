@@ -17,7 +17,7 @@
   
 </p>
 
-<img width="100%" align="centre" src="https://cdn.discordapp.com/attachments/1141162711464550430/1182120294857572352/vald.png" />
+<img width="100%" align="centre" src="https://github.com/spyboy-productions/Valid8Proxy/blob/main/image/vald%20(1).png" />
 
 <be>
 
@@ -83,6 +83,6 @@ Contributions and feature requests are welcome! If you encounter any issues or h
 
 ### ⭔ Snapshots:
 ---
-<img width="100%" align="centre" src="https://github.com/spyboy-productions/Valid8Proxy/blob/main/example.png" />
+<img width="100%" align="centre" src="https://github.com/spyboy-productions/Valid8Proxy/blob/main/image/weqdeqe.png" />
 
 <h4 align="center"> If you find this GitHub repo useful, please consider giving it a star! ⭐️ </h4> 
