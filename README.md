@@ -23,6 +23,10 @@
 
 Valid8Proxy is a versatile and user-friendly tool designed for fetching, validating, and storing working proxies. Whether you need proxies for web scraping, data anonymization, or testing network security, Valid8Proxy simplifies the process by providing a seamless way to obtain reliable and verified proxies.
 
+### Run Online Free On Google Colab
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/spyboy-productions/Valid8Proxy/blob/main/valid8proxy.ipynb)
+
 ## Features:
 
 1. **Proxy Fetching:** Retrieve proxies from popular proxy sources with a single command.
