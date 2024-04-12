@@ -57,6 +57,7 @@ Valid8Proxy is a versatile and user-friendly tool designed for fetching, validat
 
 5. **Follow Interactive Prompts:**
    - Enter the number of proxies you want to print.
+   - choose from options HTTP, HTTPS, SOCKS4, SOCKS5 and Mix_proxies
    - Sit back and let Valid8Proxy fetch, validate, and display working proxies.
 
 6. **Save to File:**
