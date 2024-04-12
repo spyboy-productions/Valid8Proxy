@@ -67,7 +67,7 @@ Valid8Proxy is a versatile and user-friendly tool designed for fetching, validat
    - Review the working proxies in the terminal with color-coded output.
    - Find the list of working proxies saved in "proxies.txt."
 
-#### If you already have proxies just want to validate usee this:
+#### If you already have proxies just want to validate use this:
 
 ```
 python Validator.py
