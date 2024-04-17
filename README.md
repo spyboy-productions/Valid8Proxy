@@ -86,8 +86,15 @@ Contributions and feature requests are welcome! If you encounter any issues or h
 #### 💬 If having an issue [Chat here](https://discord.gg/ZChEmMwE8d)
 [![Discord Server](https://discord.com/api/guilds/726495265330298973/embed.png)](https://discord.gg/ZChEmMwE8d)
 
+### ▶️ Video
+
+[Youtbue video](https://www.youtube.com/watch?v=FWFFAbgC8Bo)
+
+
 ### ⭔ Snapshots:
 ---
+<a href="https://youtu.be/FWFFAbgC8Bo?si=kUfH4H9HUkqdnksI">
 <img width="100%" align="centre" src="https://github.com/spyboy-productions/Valid8Proxy/blob/main/image/weqdeqe.png" />
+</a>
 
 <h4 align="center"> If you find this GitHub repo useful, please consider giving it a star! ⭐️ </h4> 
