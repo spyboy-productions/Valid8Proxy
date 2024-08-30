@@ -150,7 +150,6 @@ def main():
         "https://www.proxy-list.download/api/v1/get?type=https",
         "https://raw.githubusercontent.com/officialputuid/KangProxy/KangProxy/https/https.txt",
         "https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-https.txt",
-        "https://raw.githubusercontent.com/officialputuid/KangProxy/KangProxy/https/https.txt",
 
     ]
 
