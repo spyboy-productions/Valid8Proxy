@@ -5,6 +5,8 @@ import os
 from colorama import Fore, Style, init
 from threading import Thread, Lock
 
+max_width = 22  # Adjust based on the longest proxy string
+
 init(autoreset=True)
 print_lock = Lock()
 stop_code = False
@@ -15,7 +17,7 @@ website = 'https://spyboy.in/'
 blog = 'https://spyboy.blog/'
 github = 'https://github.com/spyboy-productions/Valid8Proxy'
 
-VERSION = '0.0.3'
+VERSION = '0.0.4'
 
 R = '\033[31m'  # red
 G = '\033[32m'  # green
@@ -75,7 +77,7 @@ def is_proxy_working(proxy):
         return response.status_code == 200
     except requests.exceptions.RequestException as e:
         with print_lock:
-            print(f'{proxy} {Fore.YELLOW}: {Fore.RED}[Not Working]{Style.RESET_ALL}')
+            print(f'{proxy.ljust(max_width)}:  {Fore.RED}[Inactive]{Style.RESET_ALL}')
         return False
 
 def validate_and_print_proxies(proxy_ips, print_limit=None):
@@ -102,7 +104,8 @@ def validate_and_print_proxy(proxy, working_proxies, print_limit):
     if not stop_code and is_proxy_working(proxy):
         with print_lock:
             if len(working_proxies) < print_limit:
-                print(f"{proxy} {Fore.YELLOW}: {Fore.GREEN}[Working]{Style.RESET_ALL}")
+                #print(f"{proxy} {Fore.YELLOW}: {Fore.GREEN}[Working]{Style.RESET_ALL}")
+                print(f'{proxy.ljust(max_width)}:  {Fore.GREEN}[Active]{Style.RESET_ALL}')
                 working_proxies.add(proxy)
             if len(working_proxies) >= print_limit:
                 stop_code = True
