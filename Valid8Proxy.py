@@ -141,6 +141,7 @@ def main():
         "https://www.proxy-list.download/api/v1/get?type=http",
         "https://raw.githubusercontent.com/officialputuid/KangProxy/KangProxy/http/http.txt",
         "https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/http.txt",
+        "https://api.proxyscrape.com/v2/?request=displayproxies&protocol=http&timeout=10000&country=all&ssl=all&anonymity=all",
         "https://raw.githubusercontent.com/TheSpeedX/SOCKS-List/master/http.txt",
 
     ]
@@ -148,6 +149,7 @@ def main():
     proxy_urls_HTTPS = [
         "https://www.sslproxies.org/",
         "https://www.proxy-list.download/api/v1/get?type=https",
+        "https://api.proxyscrape.com/v2/?request=displayproxies&protocol=https&timeout=10000&country=all&ssl=all&anonymity=all",
         "https://raw.githubusercontent.com/officialputuid/KangProxy/KangProxy/https/https.txt",
         "https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-https.txt",
 
@@ -160,6 +162,7 @@ def main():
         "https://raw.githubusercontent.com/officialputuid/KangProxy/KangProxy/socks4/socks4.txt",
         "https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/socks4.txt",
         "https://raw.githubusercontent.com/TheSpeedX/SOCKS-List/master/socks4.txt",
+        "https://api.proxyscrape.com/v2/?request=displayproxies&protocol=SOCKS4&timeout=10000&country=all&ssl=all&anonymity=all",
         "https://raw.githubusercontent.com/rdavydov/proxy-list/main/proxies_anonymous/socks4.txt",
 
     ]
@@ -173,7 +176,9 @@ def main():
         "https://raw.githubusercontent.com/ErcinDedeoglu/proxies/main/proxies/socks5.txt",
         "https://raw.githubusercontent.com/TheSpeedX/SOCKS-List/master/socks5.txt",
         "https://raw.githubusercontent.com/rdavydov/proxy-list/main/proxies_anonymous/socks5.txt",
+        "https://api.proxyscrape.com/v2/?request=displayproxies&protocol=SOCKS5&timeout=10000&country=all&ssl=all&anonymity=all",
         "https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-socks5.txt",
+      
 
     ]
 
@@ -183,6 +188,10 @@ def main():
         'https://free-proxy-list.net/anonymous-proxy.html',
         'https://free-proxy-list.net/uk-proxy.html',
         'https://www.us-proxy.org/',
+        'https://api.proxyscrape.com/v2/?request=displayproxies&protocol=SOCKS4&timeout=10000&country=all&ssl=all&anonymity=all',
+        'https://api.proxyscrape.com/v2/?request=displayproxies&protocol=http&timeout=10000&country=all&ssl=all&anonymity=all',
+        'https://api.proxyscrape.com/v2/?request=displayproxies&protocol=https&timeout=10000&country=all&ssl=all&anonymity=all',
+        "https://api.proxyscrape.com/v2/?request=displayproxies&protocol=SOCKS5&timeout=10000&country=all&ssl=all&anonymity=all",
         'https://free-proxy-list.net/'
 
     ]
