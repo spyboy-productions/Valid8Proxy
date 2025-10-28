@@ -2,6 +2,7 @@ import requests
 import time
 import sys
 import os
+import re
 from colorama import Fore, Style, init
 from threading import Thread, Lock
 
@@ -70,17 +71,22 @@ def fetch_proxies(url):
             print(f'Error fetching proxies from {url}: {Fore.RED}{str(e)}{Style.RESET_ALL}')
         return []
 
-def is_proxy_working(proxy):
+def is_proxy_working(proxy, test_url=None):
     try:
-        response = requests.get("https://www.example.com", proxies={"http": proxy, "https": proxy}, timeout=5)
-        response.raise_for_status()
-        return response.status_code == 200
+        if test_url is not None:
+            response = requests.get(test_url, proxies={"http": proxy, "https": proxy}, timeout=5)
+            response.raise_for_status()
+            return response.status_code == 200
+        else:
+            response = requests.get("https://www.example.com", proxies={"http": proxy, "https": proxy}, timeout=5)
+            response.raise_for_status()
+            return response.status_code == 200
     except requests.exceptions.RequestException as e:
         with print_lock:
             print(f'{proxy.ljust(max_width)}:  {Fore.RED}[Inactive]{Style.RESET_ALL}')
         return False
 
-def validate_and_print_proxies(proxy_ips, print_limit=None):
+def validate_and_print_proxies(proxy_ips, test_url=None, print_limit=None):
     global stop_code
     working_proxies = set()  # Use a set to store unique working proxies
     printed_count = 0
@@ -90,7 +96,7 @@ def validate_and_print_proxies(proxy_ips, print_limit=None):
         if printed_count >= print_limit:
             break
 
-        thread = Thread(target=validate_and_print_proxy, args=(proxy, working_proxies, print_limit))
+        thread = Thread(target=validate_and_print_proxy, args=(proxy, test_url, working_proxies, print_limit))
         threads.append(thread)
         thread.start()
 
@@ -99,9 +105,9 @@ def validate_and_print_proxies(proxy_ips, print_limit=None):
 
     return working_proxies
 
-def validate_and_print_proxy(proxy, working_proxies, print_limit):
+def validate_and_print_proxy(proxy, test_url, working_proxies, print_limit):
     global stop_code
-    if not stop_code and is_proxy_working(proxy):
+    if not stop_code and is_proxy_working(proxy, test_url):
         with print_lock:
             if len(working_proxies) < print_limit:
                 #print(f"{proxy} {Fore.YELLOW}: {Fore.GREEN}[Working]{Style.RESET_ALL}")
@@ -133,6 +139,18 @@ def main():
     except ValueError:
         print("Invalid input. Please enter a valid number.")
         sys.exit(1)
+
+    test_url = input(f"{Fore.YELLOW}Enter the test URL, keep empty if you want to use default{Fore.CYAN}(ex: https://www.example.com):{Style.RESET_ALL}") or None
+
+    if test_url is not None:
+        # Regex to match only valid http/https URLs
+        pattern = r"^https?://[^\s/$.?#].[^\s]*$"
+        test_url = test_url if re.match(pattern, test_url) else None
+        if test_url is None:
+            print(f"{Fore.RED}Invalid URL format. Using default test URL: {Fore.CYAN}https://www.example.com{Style.RESET_ALL}")
+    
+    else:
+        print(f"{Fore.YELLOW}Using default test URL: {Fore.CYAN}https://www.example.com{Style.RESET_ALL}")
 
     start_time = time.time()
     
@@ -233,7 +251,7 @@ def main():
     for url in proxy_urls:
         proxy_ips.extend(fetch_proxies(url))
 
-    working_proxies = validate_and_print_proxies(proxy_ips, print_limit=num_proxies_to_print)
+    working_proxies = validate_and_print_proxies(proxy_ips, test_url=test_url, print_limit=num_proxies_to_print)
 
     print(f"\n{Fore.YELLOW}[+]{Fore.GREEN} List of Working Proxies:{Style.RESET_ALL}\n")
     for proxy in working_proxies:
